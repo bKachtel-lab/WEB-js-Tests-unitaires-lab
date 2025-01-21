@@ -1,6 +1,6 @@
-# JS Basics Lab [![pipeline status](https://www-apps.univ-lehavre.fr/forge/2023-2024-M1/WEB-jsbasics-lab/badges/master/pipeline.svg)](https://www-apps.univ-lehavre.fr/forge/2023-2024-M1/WEB-jsbasics-lab/commits/master)  [![coverage report](https://www-apps.univ-lehavre.fr/forge/2023-2024-M1/WEB-jsbasics-lab/badges/master/coverage.svg)](https://www-apps.univ-lehavre.fr/forge/2023-2024-M1/WEB-jsbasics-lab/commits/master)
+# JS Basics Lab [![pipeline status](https://www-apps.univ-lehavre.fr/forge/2024-2025-M1/WEB-jsbasics-lab/badges/master/pipeline.svg)](https://www-apps.univ-lehavre.fr/forge/2024-2025-M1/WEB-jsbasics-lab/commits/master)  [![coverage report](https://www-apps.univ-lehavre.fr/forge/2024-2025-M1/WEB-jsbasics-lab/badges/master/coverage.svg)](https://www-apps.univ-lehavre.fr/forge/2024-2025-M1/WEB-jsbasics-lab/commits/master)
 
-- Année : M1 IWOCS 2023-2024
+- Année : M1 IWOCS 2024-2025
 - Matière: WEB
 - TP : n°1
 
