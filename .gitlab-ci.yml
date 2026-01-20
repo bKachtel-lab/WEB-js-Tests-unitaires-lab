@@ -1,8 +1,7 @@
-image: node:20
+image: node:22
 
 before_script:
-- npm install
-
+  - npm install
 
 # This folder is cached between builds
 # http://docs.gitlab.com/ce/ci/yaml/README.html#cache
@@ -10,8 +9,9 @@ cache:
   key: ${CI_COMMIT_REF_SLUG}
   paths:
     - node_modules/
-    
+
 test:
   script:
-  - npm run ci 
+    - npm run ci
   coverage: /All files\s+\|\s+([\d.]+)/
+
