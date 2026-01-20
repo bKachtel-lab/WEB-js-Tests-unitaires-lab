@@ -1,19 +1,19 @@
-# JS Basics Lab [![pipeline status](https://www-apps.univ-lehavre.fr/forge/2024-2025-M1/WEB-jsbasics-lab/badges/master/pipeline.svg)](https://www-apps.univ-lehavre.fr/forge/2024-2025-M1/WEB-jsbasics-lab/commits/master)  [![coverage report](https://www-apps.univ-lehavre.fr/forge/2024-2025-M1/WEB-jsbasics-lab/badges/master/coverage.svg)](https://www-apps.univ-lehavre.fr/forge/2024-2025-M1/WEB-jsbasics-lab/commits/master)
+# JS Basics Lab [![pipeline status](https://www-apps.univ-lehavre.fr/forge/2025-2026-m1/WEB-jsbasics-lab/badges/master/pipeline.svg)](https://www-apps.univ-lehavre.fr/forge/2025-2026-m1/WEB-jsbasics-lab/commits/master) [![coverage report](https://www-apps.univ-lehavre.fr/forge/2025-2026-m1/WEB-jsbasics-lab/badges/master/coverage.svg)](https://www-apps.univ-lehavre.fr/forge/2025-2026-m1/WEB-jsbasics-lab/commits/master)
 
-- Année : M1 IWOCS 2024-2025
+- Année : M1 IWOCS 2025-2026
 - Matière: WEB
 - TP : n°1
 
 ## Auteur(s)
 
-|Nom|Prénom|login|email|
-|--|--|--|--|
-| *Nom auteur* | *Prénom auteur*| *login auteur* | *email auteur* |
+| Nom          | Prénom          | login          | email          |
+| ------------ | --------------- | -------------- | -------------- |
+| _Nom auteur_ | _Prénom auteur_ | _login auteur_ | _email auteur_ |
 
 ## Travail à réaliser
 
 - [ ] Se connecter à la [forge de l'université](https://www-apps.univ-lehavre.fr/forge) avec son propre login (se connecter avec le CAS de l'université la première fois). :warning: Bien s'assurer que **GIT est correctement configuré**. Pour plus d'information sur GIT, GitLab et la forge de l'université, se référer au [cours introductif au travail en équipe à l'université](https://pigne.org/teaching/general/lecture/Gestion-de-version-travail-en-equipe).
-- [ ] "*Forker*" ou "diverger" le projet (bouton "*Fork*" ou "Divergence").
+- [ ] "_Forker_" ou "diverger" le projet (bouton "_Fork_" ou "Divergence").
 - [ ] Cloner son propre projet dans une copie de travail locale en utilisant le schema d'URL `https` (`git clone https://www-apps.univ-lehavre.fr/forge/LOGIN/WEB-jsbasics-lab.git`)
 - [ ] Modifier le fichier README.md (ce fichier) pour y faire apparaître vos coordonnées (nom, prénom, login, email).
 - [ ] Dans la copie de travail exécuter la commande `npm install` ou `npm i` pour installer les dépendances du projet.
@@ -37,4 +37,3 @@ Quand tous les tests passent, que la couverture du code par les tests est satisf
 - Le respect des règles syntaxiques est effectué par [ESLint](https://eslint.org/).
 - L'outils permettant l'exécution des tests est la plateforme [Jest](http://facebook.github.io/jest/).
 - [NPM](https://www.npmjs.com/) est utilisé pour la gestion des dépendances et l'exécution des différents scripts.
-
