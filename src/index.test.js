@@ -205,8 +205,44 @@ describe('JS Basics Tests', () => {
    *
    */
   describe('Test permutations', () => {
-    // TODO
+    //test tableau vide
+      test('Empty array', () => {
+        expect(permutations([])).toEqual([]);
+      });
+    //test un element
+      test('one element', () => {
+        expect(permutations([1])).toEqual([1]);
+      });
+    //test deux elements
+       test('Two elements', () => {
+    expect(permutations([1, 2])).toEqual([
+      [1, 2],
+      [2, 1],
+    ]);
+
   });
+   // test 3 elements
+  test('Three elements', () => {
+    const input = [0, 1, 2];
+    const result = permutations(input);
+    const expected = [
+      [0, 1, 2],
+      [0, 2, 1],
+      [1, 0, 2],
+      [1, 2, 0],
+      [2, 0, 1],
+      [2, 1, 0],
+    ];
+    expect(result).toEqual(expected);
+  });
+
+  // tester la permutation
+  test('With duplicates', () => {
+    const input = [1, 1, 2];
+    const result = permutations(input);
+    expect(result.length).toBe(6); // duplicates produce more permutations
+  });
+});
 
   /**
    * Tester la fonction `echantillon`.
