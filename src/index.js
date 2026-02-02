@@ -1,7 +1,6 @@
 /**
  * Return true if it's even, and false if it isn't.
  *
- * @param {Number} i
  */
 export const isNumberEven = i => {
   // UN NOMBRE EST PAIR SI LE RESTE DE LA DIVISION par 2 est 0
@@ -11,10 +10,18 @@ export const isNumberEven = i => {
 /**
  * `str` is a string, but it may not have a file extension.
  * Return the file extension (with no period) if it has one, otherwise false
- * @param {String} str
  */
 export const getFileExtension = str => {
-  // TODO
+  // On coupe la chaine avec le caractere
+  const parts = str.split('.');
+  // s'il n y a qu'un seul morceau il y a pas d extension
+  if(parts.length === 1){
+    return false;
+  }
+
+  //sinon on retourne le dernier morceau
+  return parts[parts.length - 1];
+  
 };
 
 /**
