@@ -8,6 +8,7 @@ import {
   retireDe,
   aplatirRecursif,
   permutations,
+  echantillon,
 } from '../src';
 
 describe('JS Basics Tests', () => {
@@ -236,7 +237,7 @@ describe('JS Basics Tests', () => {
     expect(result).toEqual(expected);
   });
 
-  // tester la permutation
+  // tester la longueur de permutation 
   test('With duplicates', () => {
     const input = [1, 1, 2];
     const result = permutations(input);
@@ -254,7 +255,20 @@ describe('JS Basics Tests', () => {
    *
    */
   describe('Test echantillon', () => {
-    // TODO
+    test ('Should return one of the elements', () => {
+      const arr = [1, 2, 3, 4, 5];
+      const sample = echantillon(arr);
+      expect(arr).toContain(sample);
+
+    });
+
+    test('Mock Math.random for predictability', () => {
+      const arr = ['a', 'b', 'c'];
+      const originalRandom = Math.random;
+      Math.random = () => 0.6; // faut que le resultat de l'index soit 1  car on remplace Math.random par 0.6
+      expect(echantillon(arr)).toBe('b');
+      Math.random = originalRandom; //restore
+    });
   });
 
   /**
