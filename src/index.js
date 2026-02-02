@@ -240,5 +240,22 @@ export const enumerer = (tab, separateur = ', ', fin = separateur) => {
  * Utiliser `Array.prototype.sort()`, l'opérateur de destructuration (...) et `Array.prototype.slice()`
  */
 export const nMax = (tab, n = 1) => {
-  //TODO
+  //on copie le tableau
+  const copy = tab.splice();
+  //on garde uniquemetn les nombres
+    const numbers = [];
+
+   for (let i = 0; i < copy.length; i += 1) {
+    if (typeof copy[i] === 'number') {
+      numbers.push(copy[i]);
+    }
+  } 
+
+   // Tri décroissant
+  numbers.sort(function (a, b) {
+    return b - a;
+  });
+
+  // On retourne les n premiers
+  return numbers.slice(0, n);
 };
