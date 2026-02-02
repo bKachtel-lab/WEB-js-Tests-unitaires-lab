@@ -9,6 +9,8 @@ import {
   aplatirRecursif,
   permutations,
   echantillon,
+  enumerer,
+  nMax,
 } from '../src';
 
 describe('JS Basics Tests', () => {
@@ -255,13 +257,16 @@ describe('JS Basics Tests', () => {
    *
    */
   describe('Test echantillon', () => {
+    //doit retourner un des element du tebleau
     test ('Should return one of the elements', () => {
       const arr = [1, 2, 3, 4, 5];
       const sample = echantillon(arr);
+      //sample doit etre inclut dans arr
       expect(arr).toContain(sample);
 
     });
 
+    //rendre Math.random previsible 
     test('Mock Math.random for predictability', () => {
       const arr = ['a', 'b', 'c'];
       const originalRandom = Math.random;
@@ -284,7 +289,28 @@ describe('JS Basics Tests', () => {
    * Attention aux cas particuliers (tableaux à 0, 1 ou 2 éléments.)
    */
   describe('Test enumerer', () => {
-    // TODO
+    test('Empty array', () => {
+      expect(enumerer([])).toBe('');
+    });
+
+    test('One element', () => {
+      expect(enumerer(['Riri'])).toBe('Riri');
+    });
+
+    test('Two element', () => {
+      expect(enumerer(['Riri', 'Fifi'], ',', 'et')).toBe('Riri et Fifi');
+    });
+
+    test('Three elements', () => {
+    expect(enumerer(['Riri', 'Fifi', 'Loulou'], ', ', ' et ')).toBe(
+      'Riri, Fifi et Loulou'
+    );
+  });
+
+  //separateur par default
+   test('Default separator', () => {
+    expect(enumerer(['a', 'b', 'c'])).toBe('a, b, c');
+  }); 
   });
 
   /**
