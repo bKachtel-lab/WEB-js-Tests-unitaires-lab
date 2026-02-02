@@ -4,7 +4,8 @@
   "description": "First Lab of the 'WEB' lecture for the iWOCS Master degree",
   "main": "src/index.js",
   "scripts": {
-    "test": "jest --coverage --runTestsByPath src/*.test.js",
+"test": "jest --coverage"
+,
     "pretest": "eslint src",
     "ci": "jest --ci --coverage --color=false --runTestsByPath src/*.test.js",
     "preci": "eslint --no-color src"
