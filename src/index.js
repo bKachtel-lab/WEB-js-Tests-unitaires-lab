@@ -51,7 +51,8 @@ export const longestString = arr => {
  * @param {String} str
  */
 export const reverseString = str => {
-  // TODO
+  // transforme en tableau => inverse le tab => retransforme en string
+  return str.split('').reverse().join('');
 };
 
 /**
