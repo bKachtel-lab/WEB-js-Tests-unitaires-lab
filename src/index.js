@@ -201,7 +201,35 @@ export const echantillon = tab => tab[Math.floor(Math.random() * tab.length)];
  * @param {string} fin
  */
 export const enumerer = (tab, separateur = ', ', fin = separateur) => {
-  // TODO
+  // tableau vide
+  if(tab.length === 0){
+    return '';
+  }
+
+  //un element
+  if(tab.length === 1){
+    return tab[0];
+  }
+
+  // Deux éléments
+  if (tab.length === 2) {
+    return tab[0] + fin + tab[1];
+  }
+
+   // Plus de deux éléments
+  let result = '';
+
+  for (let i = 0; i < tab.length; i += 1) {
+    if (i === tab.length - 1) {
+      result += tab[i];
+    } else if (i === tab.length - 2) {
+      result += tab[i] + fin;
+    } else {
+      result += tab[i] + separateur;
+    }
+  }
+
+  return result;
 };
 
 /**
