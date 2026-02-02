@@ -133,7 +133,20 @@ export const retireDe = (tab, ...elms) => {
  * // [5, 4, 3, 2, 1, 0]
  */
 export const aplatirRecursif = tab => {
-  //TODO
+  let result = [];
+
+  for(let i = 0; i < tab.length; i += 1){
+    //Si l'element est un tableau, on l'aplatit
+    if(Array.isArray(tab[i])){
+      result = result.concat(aplatirRecursif(tab[i]));
+    }
+    //sinon on l'ajoute tel quel
+    else if(tab[i] !== undefined){
+      result.push(tab[i]);
+    }
+  }
+
+  return result;
 };
 
 /**
