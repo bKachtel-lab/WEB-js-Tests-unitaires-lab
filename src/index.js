@@ -110,7 +110,15 @@ export const nestedSum = arr => {
  * @param  {objects} elms
  */
 export const retireDe = (tab, ...elms) => {
-  // TODO
+  // on parcourt le tableau à l'envers
+  for(let i = tab.length - 1; i >= 0; i -= 1){
+    //si l'element est dans la liste a retirer
+    if(elms.indexOf(tab[i] !== -1)){
+      //on le supp
+      tab.splice(i, 1);
+    }
+
+  }
 };
 
 /**
