@@ -63,7 +63,12 @@ export const reverseString = str => {
  * @param {String} str
  */
 export const isPalindrome = str => {
-  // TODO
+  // On met tout en miniscules
+  const lower = str.toLowerCase();
+  //on enleve tout sauf lettres et chiffres
+  const cleaned = lower.replace(/[a-z0-9]/g, '');
+  //on compare avec la version inverse
+  return cleaned === reverseString(cleaned);
 };
 
 /**
