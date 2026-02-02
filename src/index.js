@@ -76,7 +76,19 @@ export const isPalindrome = str => {
  * Return the sum all the numbers you find, anywhere in the nest of arrays.
  */
 export const nestedSum = arr => {
-  // TODO
+  let sum = 0;
+  for(let i = 0; i<arr.length; i += 1) {
+    //Si c'est un tableau on recommence dedans
+    if(Array.isArray(arr[i])){
+      sum += nestedSum(arr[i]);
+    }
+    //Si c'est un nombre on l'ajoute
+    else if(typeof arr[i] === 'number'){
+      sum += arr[i];
+    }
+    //sinon on ignore
+  }
+  return sum;
 };
 
 /**
