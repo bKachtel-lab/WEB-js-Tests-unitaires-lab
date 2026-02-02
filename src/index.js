@@ -4,7 +4,8 @@
  * @param {Number} i
  */
 export const isNumberEven = i => {
-  // TODO
+  // UN NOMBRE EST PAIR SI LE RESTE DE LA DIVISION par 2 est 0
+  return i % 2 === 0; 
 };
 
 /**
