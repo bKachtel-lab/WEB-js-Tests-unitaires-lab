@@ -28,10 +28,21 @@ export const getFileExtension = str => {
  * `arr`is a string.
  * Return the longest string in the array
  *
- * @param {String} arr
  */
 export const longestString = arr => {
-  // TODO
+  let longest = '';
+
+  //on parcourt tous les element du tableau
+  for(let i = 0; i < arr.length; i += 1){
+    //on ne garde que les chqines de caracteres
+    if(typeof arr[i] == 'string'){
+      //Si la string estplus longue que l'actuelle
+      if(arr[i].length > longest.length){
+        longest = arr[i];
+      }
+    }
+  }
+  return longest;
 };
 
 /**
