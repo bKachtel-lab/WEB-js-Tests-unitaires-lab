@@ -12,25 +12,50 @@
 
  |
 
-## Travail à réaliser
+#  JavaScript Basics Project
 
-- [ ] Se connecter à la [forge de l'université](https://www-apps.univ-lehavre.fr/forge) avec son propre login (se connecter avec le CAS de l'université la première fois). :warning: Bien s'assurer que **GIT est correctement configuré**. Pour plus d'information sur GIT, GitLab et la forge de l'université, se référer au [cours introductif au travail en équipe à l'université](https://pigne.org/teaching/general/lecture/Gestion-de-version-travail-en-equipe).
-- [ ] "_Forker_" ou "diverger" le projet (bouton "_Fork_" ou "Divergence").
-- [ ] Cloner son propre projet dans une copie de travail locale en utilisant le schema d'URL `https` (`git clone https://www-apps.univ-lehavre.fr/forge/LOGIN/WEB-jsbasics-lab.git`)
-- [ ] Modifier le fichier README.md (ce fichier) pour y faire apparaître vos coordonnées (nom, prénom, login, email).
-- [ ] Dans la copie de travail exécuter la commande `npm install` ou `npm i` pour installer les dépendances du projet.
-- [ ] Lancer les tests : `npm test` ou `npm t`
-- [ ] Il y a beaucoup d'erreurs. A vous de les corriger en écrivant le corps des fonctions dans les fichiers `src/index.js` et `src/circle.js` (à la place des commentaires `/* TODO */`) et en relançant les tests. Faire des commits **au fur et à mesure** que vous validez des tests. (`git add -u && git commit`)
-- [ ] A l'inverse certaines fonctions sont écrites dans `src/index.js` mais ne sont pas testées. A vous d'écrire les tests dans `src/index.test.js` afin de **maximiser le taux de couverture des tests**. Le taux de couverture s'affiche en ligne de commande dans le tableau à la fin des tests. Pour avoir des infos détaillées on peut ouvrir le fichier `coverage/lcov-report/index.html` dans un navigateur pour comprendre quelles lignes et quelles branches ont été oubliées. Faire des commits **au fur et à mesure** que vous écrivez les tests.
+## 👋 Présentation
 
-:warning: Le style du code écrit est également testé. Les tests ne s'exécuteront pas si le code ne respectent pas les règles syntaxiques définies. On utilise les règles recommandées ([`eslint:recommended`](https://eslint.org/docs/rules/)) par le projet ESLint.
+Projet JavaScript regroupant plusieurs fonctions utilitaires avec une couverture complète de tests unitaires.
 
-## Fin du travail
+Ce projet permet de mettre en pratique des concepts fondamentaux du développement logiciel et de l’algorithmique.
 
-Quand tous les tests passent, que la couverture du code par les tests est satisfaisante et que les modifications sont enregistrées (avec des `commit`) :
+---
 
-1. publiez votre projet : `git push`. Cela aura pour conséquence, en plus de publier vos modifications sur votre version du projet, de lancer l'exécution des tests unitaires sur le serveur d'intégration continue de la forge.
-2. créez un [merge request](https://docs.gitlab.com/ee/gitlab-basics/add-merge-request.html) pour que je puisse évaluer votre travail.
+##  Objectifs du projet
+
+- Manipulation avancée des tableaux
+- Programmation récursive
+- Gestion des classes JavaScript
+- Création de fonctions utilitaires
+- Mise en place de tests unitaires automatisés
+
+---
+
+##  Technologies utilisées
+
+- JavaScript
+- Jest (tests unitaires)
+
+---
+
+##  Tests
+
+Les tests unitaires permettent de vérifier :
+
+- La robustesse du code
+- La gestion des cas limites
+- Le bon fonctionnement des algorithmes
+
+Pour lancer les tests :
+
+```bash
+ - npm test
+ - npm jest --verbose (pour debug avec plus de details)
+
+
+
+
 
 ## technologies utilisées
 
