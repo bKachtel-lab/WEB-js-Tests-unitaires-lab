@@ -60,7 +60,7 @@ export function Circle(x, y, r) {
   Circle.distance = (c1, c2) => {
     const [x1, y1] = c1.coords;
     const [x2, y2] = c2.coords;
-    return Math.sqrt((x2 - x1) ** 2 (y2 - y1) ** 2);
+    return Math.sqrt((x2 - x1) ** 2 +  (y2 - y1) ** 2);
   };
 
   //verifie si deux cerles intersect

@@ -113,7 +113,7 @@ export const retireDe = (tab, ...elms) => {
   // on parcourt le tableau à l'envers
   for(let i = tab.length - 1; i >= 0; i -= 1){
     //si l'element est dans la liste a retirer
-    if(elms.indexOf(tab[i] !== -1)){
+    if(elms.includes(tab[i])){
       //on le supp
       tab.splice(i, 1);
     }
@@ -138,11 +138,14 @@ export const aplatirRecursif = tab => {
   for(let i = 0; i < tab.length; i += 1){
     //Si l'element est un tableau, on l'aplatit
     if(Array.isArray(tab[i])){
-      result = result.concat(aplatirRecursif(tab[i]));
+      const flat = aplatirRecursif([i]);
+      for(let j = 0; j < flat.length; j ++){
+          result = result.concat(aplatirRecursif(tab[i]));
+      }
     }
     //sinon on l'ajoute tel quel
-    else if(tab[i] !== undefined){
-      result.push(tab[i]);
+    else {
+      result[result.length] = tab[i];
     }
   }
 
@@ -213,7 +216,7 @@ export const enumerer = (tab, separateur = ', ', fin = separateur) => {
 
   // Deux éléments
   if (tab.length === 2) {
-    return tab[0] + fin + tab[1];
+    return tab[0] + ' ' + fin + ' ' + tab[1];
   }
 
    // Plus de deux éléments
@@ -241,20 +244,11 @@ export const enumerer = (tab, separateur = ', ', fin = separateur) => {
  */
 export const nMax = (tab, n = 1) => {
   //on copie le tableau
-  const copy = tab.splice();
+  const copy = [...tab];
   //on garde uniquemetn les nombres
-    const numbers = [];
-
-   for (let i = 0; i < copy.length; i += 1) {
-    if (typeof copy[i] === 'number') {
-      numbers.push(copy[i]);
-    }
-  } 
-
+    const numbers = copy.filter(x => typeof x === 'number'); 
    // Tri décroissant
-  numbers.sort(function (a, b) {
-    return b - a;
-  });
+  numbers.sort((a, b) => b - a );
 
   // On retourne les n premiers
   return numbers.slice(0, n);

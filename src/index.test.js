@@ -330,27 +330,33 @@ describe('JS Basics Tests', () => {
    */
   describe('Test nMax', () => {
     test('Empty array', () => {
-      expect(nMax([]), 2).toEqual([5]);
+      const expected = [];
+      expect(nMax([], 2)).toEqual(expected);
     });
 
     test('Single element', () => {
-      expect(nMax([5])).toEqual([5]);
+       const expected = [5];
+      expect(nMax([5])).toEqual(expected);
     });
 
      test('More than one element', () => {
-    expect(nMax([1, 3, 2], 2)).toEqual([3, 2]);
+        const expected = [3,2];
+        expect(nMax([1, 3, 2], 2)).toEqual(expected);
   });
 
   test('n larger than array', () => {
-    expect(nMax([1, 2, 3], 10).sort((a,b)=>a-b)).toEqual([1,2,3]);
+      const expected = [3,2];
+      expect(nMax([1, 2, 3], 10)).toEqual(expected);
   });
 
   test('Ignore non-numbers', () => {
-    expect(nMax(['1', 2, 3], 2)).toEqual([3, 2]);
+    const expected = [3, 2];
+    expect(nMax(['1', 2, 3], 3)).toEqual(expected);
   });
 
   test('All non-numbers', () => {
-    expect(nMax(['1', '2', '3'], 2)).toEqual([]);
+    const expected = [];
+    expect(nMax(['1', '2', '3'], 2)).toEqual(expected);
   }); 
 
  
